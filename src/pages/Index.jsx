@@ -1,19 +1,11 @@
 import NavBar from '../components/NavBar'
-import useFetch from '../hooks/useFetch'
+import PageIntro from '../components/PageIntro'
 function Home() {
-let {users, setUsers} = useFetch("https://jsonplaceholder.typicode.com/users ")
-
-
-
-const deleteBtn = (id) => {
-  const newUsers = users.filter(user => user.id !== id) 
-  setUsers(newUsers)
-  console.log( id)
-}
 
   return (
     <>
-      {users && <NavBar userData={users} deleteBtn={deleteBtn}  />}
+      {<NavBar/>}
+      {<PageIntro title='Monday, Decem 27, 2024' heading='Good morning, Jordan.' description='Here is what is happening across your properties today.' button='Add Property' />}
     </>
   )
 }

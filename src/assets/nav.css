@@ -48,19 +48,31 @@ nav ul li:nth-child(2) p {
 }
 
 .side-panel-container {
-    width: 80%;
+    width: 0%;
     height: 100vh;
+    overflow: hidden;
     background: var(--background);
     position: fixed;
     top: 0;
+    transition: 0.2s ease-in-out all;
     z-index: 1;
 }
 
+.activeSidePanel {
+    width: 65%;
+    transition: 0.2s ease-in-out all;
+}
 .side-panel-ul li {
     display: flex;
     align-items: center;
     color: var(--primary-color);
     padding: 18px 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.side-panel-ul .material-icons {
+    font-size: 20px;
 }
 
 .side-panel-ul li p {

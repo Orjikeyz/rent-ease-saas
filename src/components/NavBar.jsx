@@ -1,14 +1,22 @@
-import { useState } from "react";
-import { Link, NavLink} from "react-router";
+import { use, useState } from "react";
+import { Link} from "react-router";
 import "../assets/style.css";
 import "../assets/nav.css";
 const NavBar = () => {
+    const [panelOpen, setPanelOpen] = useState(false)
+
+    const sidePanel = panelOpen ? "activeSidePanel" : "";
+
+    const openSidePanel = () => {
+        setPanelOpen(!panelOpen);
+    }
+
     return (
         <>
-            <nav>
+            <nav onClick={openSidePanel}>
                 <ul>
                     <li>
-                        <i className="fa fa-bars"></i>
+                        <i className="fa fa-bars" onClick={openSidePanel}></i>
                         <div>
                             <h4>Rent Ease</h4>
                             <p>OWNER WORKSPACE</p>
@@ -22,7 +30,7 @@ const NavBar = () => {
                 </ul>
             </nav>
 
-            <div className="side-panel-container">
+            <div className={`side-panel-container ${sidePanel}`}>
                 <nav>
                     <ul>
                         <li>
@@ -33,7 +41,7 @@ const NavBar = () => {
                         </li>
 
                         <li>
-                            <p>X</p>
+                            <p style={{padding: "10px 13px"}} onClick={openSidePanel}><i className="fa fa-x"></i></p>
                         </li>
                     </ul>
                 </nav>
