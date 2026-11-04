@@ -15,9 +15,9 @@ nav ul li {
 
 nav ul .fa-bars {
     color: var(--primary-color);
-    border-radius: 100%;
-    border: 1px solid var(--secondary-color);
-    padding: 8px 10px;
+    /* border-radius: 100%; */
+    /* border: 1px solid var(--secondary-color); */
+    padding: 8px 15px;
 }
 
 nav ul li:nth-child(1) h4 {
@@ -33,17 +33,18 @@ nav ul li:nth-child(1) p {
     color: var(--secondary-color);
 }
 
-nav ul li:nth-child(2) .fa-bell {
+nav ul li:nth-child(3) .fa-bell {
     padding: 10px;
     color: var(--primary-color);
 }
 
-nav ul li:nth-child(2) p {
+nav ul li:nth-child(3) p {
     color: var(--primary-color);
     border-radius: 100%;
     padding: 10px 10px;
     font-weight: bold;
     font-size: 13px;
+    margin-left: 20px;
     background: var(--light-background);
 }
 
@@ -51,7 +52,7 @@ nav ul li:nth-child(2) p {
     width: 0%;
     height: 100vh;
     overflow: hidden;
-    background: var(--background);
+    background: var(--light-background);
     position: fixed;
     top: 0;
     transition: 0.2s ease-in-out all;
@@ -103,4 +104,23 @@ nav ul li:nth-child(2) p {
 
 .side-panel-footer-bottom div {
     padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .side-panel-container {
+        width: 250px;
+    }
+
+    .breadcrump {
+        display: block !important;
+    }
+    
+    .fixed-width {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    .closePanel {
+        display: none;
+    }
 }

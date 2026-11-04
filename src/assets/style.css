@@ -6,8 +6,9 @@
 }
 
 :root {
-    --primary-color: #23574e;
+    --primary-color: #183b35;
     --secondary-color: #8a9892;
+    --text-color: #226056;
     --outline-color: #e1e8e3;
     --light-background: #dce9dc;
     --background: #edf4ed;
@@ -18,9 +19,10 @@ html {
 }
 
 body {
-    /* background-color: var(--background); */
+    background-color: var(--background);
     color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 a {
@@ -28,3 +30,108 @@ a {
     color: inherit;
 }
 
+.fixed-width {
+    padding: 10px;
+}
+
+.pageIntro {
+    padding: 10px 30px;
+}
+
+.pageIntro h1 {
+    color: var(--primary-color);
+    padding: 3px 0;
+    font-size: 28px;
+}
+
+.pageIntro p:nth-child(1) {
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pageIntro p:nth-child(3) {
+    color: var(--text-color);
+    font-size: 14.5px;
+    padding-top: 5px;
+}
+
+.pageIntro button {
+    margin: 15px 0;
+    padding: 15px 10px;
+    width: 100%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+.analystic-container-grid {
+    border: 1px solid var(--outline-color);
+    padding: 25px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background: #f1f9f1;
+    color: var(--primary-color);
+}
+
+.analystic-container-grid div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.analystic-container-grid .far, .analystic-container-grid  .fa {
+    background-color: var(--light-background);
+    padding: 10px 12px;
+    border-radius: 100%;
+}
+
+.analystic-container-grid h4 {
+    /* letter-spacing: 2px; */
+    color: var(--secondary-color);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.analystic-container-grid p {
+    font-size: 12px;
+    padding: 2px 0;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+
+@media screen and (min-width: 768px) {
+    .fixed-width {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+        /* padding: 10px 40px; */
+    }
+
+    .pageIntro {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pageIntro div:nth-child(2) {
+        transform: translateY(20px);
+    }
+
+    .pageIntro button {
+        padding: 15px 20px;
+    }
+
+    .analystic-container-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .analystic-container-grid {
+        margin: 10px 5px;
+    }
+}

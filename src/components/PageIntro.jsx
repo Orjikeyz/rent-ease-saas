@@ -1,10 +1,17 @@
 const PageIntro = (props) => {
     return (
         <>
-            <p>{props.title}</p>
-            <h2>{props.heading}</h2>
-            <p>{props.description}</p>
-            <button><i className="fa fa-plus"></i> {props.button}</button>
+            <div className="pageIntro">
+                <div>
+                    <p>{props.title}</p>
+                    <h1>{props.heading}</h1>
+                    <p>{props.description}</p>
+                </div>
+                
+                <div>
+                    <button><i className="fa fa-plus"></i> {props.button}</button>
+                </div>
+            </div>
         </>
     )
 }
