@@ -7,8 +7,8 @@ function Home () {
       <div className='fixed-width'>
         {
           <PageIntro
-            title='Monday, Decem 27, 2024'
-            heading='Good morning, Jordan.'
+            title='Friday, November 06, 2026'
+            heading='Good evening, Jordan.'
             description='Here is what is happening across your properties today.'
             button='Add Property'
           />
