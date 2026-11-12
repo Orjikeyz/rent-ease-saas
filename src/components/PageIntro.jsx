@@ -1,3 +1,5 @@
+import AddProperty from "./AddProperty"
+
 const PageIntro = (props) => {
     return (
         <>
@@ -9,7 +11,7 @@ const PageIntro = (props) => {
                 </div>
                 
                 <div>
-                    <button><i className="fa fa-plus"></i> {props.button}</button>
+                    <button onClick={props.onAddProperty}><i className="fa fa-plus"></i> {props.button}</button>
                 </div>
             </div>
         </>

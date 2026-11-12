@@ -1,18 +1,35 @@
+import { useState } from 'react'
 import NavBar from '../components/NavBar'
 import PageIntro from '../components/PageIntro'
+import AddProperty from '../components/AddProperty'
 function Home () {
+    const [showPropertyModal, setShowPropertyModal] = useState(false)
+    const addPropertyPanel = showPropertyModal ? 'activeModalPanel' : ''
+    const modalOverviewStatus = showPropertyModal ? 'activeModalOverview' : ''
+    
+    const addPropertyBtn = () => {
+        setShowPropertyModal(!showPropertyModal)
+    }
+
+
+
   return (
     <>
       {<NavBar />}
+      {<AddProperty onPropertyModal={addPropertyPanel} closePropertyModal={addPropertyBtn} />}   {/* Add property modal component */}
+
       <div className='fixed-width'>
+        <div className={`modal-overview ${modalOverviewStatus}`} onClick={addPropertyBtn}></div>
         {
           <PageIntro
             title='Friday, November 06, 2026'
             heading='Good evening, Jordan.'
             description='Here is what is happening across your properties today.'
             button='Add Property'
+            onAddProperty={addPropertyBtn}
           />
         }
+
 
         <div className="analystic-container" style={{padding: "10px 30px"}}>
           <div className='analystic-container-content'>
