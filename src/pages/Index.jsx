@@ -2,15 +2,11 @@ import { useState } from 'react'
 import NavBar from '../components/NavBar'
 import PageIntro from '../components/PageIntro'
 import AddProperty from '../components/AddProperty'
-function Home () {
-    const [showPropertyModal, setShowPropertyModal] = useState(false)
-    const addPropertyPanel = showPropertyModal ? 'activeModalPanel' : ''
-    const modalOverviewStatus = showPropertyModal ? 'activeModalOverview' : ''
-    
-    const addPropertyBtn = () => {
-        setShowPropertyModal(!showPropertyModal)
-    }
+import usePropertyModal from '../hooks/usePropertyModal' //hooks
 
+
+function Home () {
+const { addPropertyPanel, modalOverviewStatus, addPropertyBtn} = usePropertyModal()
 
 
   return (

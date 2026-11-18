@@ -1,4 +1,5 @@
 import { Link} from "react-router";
+import { NavLink } from 'react-router'
 
 const SidePanel = ({openSidePanel, sidePanel}) => {
     return (
@@ -20,11 +21,25 @@ const SidePanel = ({openSidePanel, sidePanel}) => {
                 </nav>
 
                 <ul className="side-panel-ul"> 
-                    <Link to=""><li className="active"><i className="fa fa-people-roof"></i> <p>Dashboard</p></li></Link>
-                    <Link to=""><li><i className="fa-regular fa-building"></i> <p>Properties</p></li></Link>
-                    <Link to=""><li><i className="fa-regular fa-user"></i> <p>Tenants</p></li></Link>
-                    <Link to=""><li><i className="fa-regular fa-bell"></i> <p>Notification</p></li></Link>
-                    <Link to=""><li><i className="fa-regular fa-file"></i> <p>Report</p></li></Link>
+                    <NavLink to="/" end>
+                        <li><i className="fa fa-people-roof"></i> <p>Dashboard</p></li>
+                    </NavLink>
+
+                    <NavLink to="/properties">
+                        <li><i className="fa-regular fa-building"></i> <p>Properties</p></li>
+                    </NavLink>
+
+                    <NavLink to="/tenants">
+                        <li><i className="fa-regular fa-user"></i> <p>Tenants</p></li>
+                    </NavLink>
+
+                    <NavLink to="/notifications">
+                        <li><i className="fa-regular fa-bell"></i> <p>Notification</p></li>
+                    </NavLink>
+
+                    <NavLink to="/reports">
+                        <li><i className="fa-regular fa-file"></i> <p>Report</p></li>
+                    </NavLink>
                 </ul>
 
                 <div className="side-panel-footer">

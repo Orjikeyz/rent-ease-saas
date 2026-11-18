@@ -6,6 +6,7 @@ const NavBar = () => {
     const [panelOpen, setPanelOpen] = useState(false)
 
     const sidePanel = panelOpen ? 'activeSidePanel' : ''
+    const modalOverviewStatus = panelOpen ? 'activeModalOverview' : ''
 
     const openSidePanel = () => {
         setPanelOpen(!panelOpen)
@@ -14,6 +15,7 @@ const NavBar = () => {
     return (
         <>
             <SidePanel openSidePanel={openSidePanel} sidePanel={sidePanel} />
+            <div className={`modal-overview ${modalOverviewStatus}`} onClick={openSidePanel}></div>
             <div className="fixed-width">
                 <nav>
                     <ul>

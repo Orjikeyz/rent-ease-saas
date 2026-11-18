@@ -56,7 +56,7 @@ nav ul li:nth-child(3) p {
     position: fixed;
     top: 0;
     transition: 0.2s ease-in-out all;
-    z-index: 1;
+    z-index: 101;
 }
 
 .activeSidePanel {
@@ -73,7 +73,7 @@ nav ul li:nth-child(3) p {
     font-weight: 600;
 }
 
-.active {
+.side-panel-ul a.active li {
     background-color: var(--outline-color);
     border-radius: 20px;
 }
@@ -115,6 +115,7 @@ nav ul li:nth-child(3) p {
 @media screen and (min-width: 768px) {
     .side-panel-container {
         width: 250px;
+        z-index: 99;
     }
 
     .breadcrump {
