@@ -7,7 +7,7 @@ const usePropertyModal = () => {
     const modalOverviewStatus = showPropertyModal ? 'activeModalOverview' : ''
 
     const addPropertyBtn = () => {
-        setShowPropertyModal(!showPropertyModal)
+        setShowPropertyModal(prev => !prev)
     }
 
     return {

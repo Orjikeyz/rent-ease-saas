@@ -89,7 +89,7 @@ const { addPropertyPanel, modalOverviewStatus, addPropertyBtn} = usePropertyModa
                         <div className="recent-request-content-item">
                             <div><i className="fa fa-wrench pending-status"></i></div>
                             <div className='recent-request-content-data'>
-                                <p style={{color: "var(--primary-color)", display: "flex", alignItems: "center"}}><h5>Leakking toilet</h5> <span style={{fontSize: "10px", paddingLeft: "10px"}}>#5040</span></p>
+                                <div style={{color: "var(--primary-color)", display: "flex", alignItems: "center"}}><h5>Leakking toilet</h5> <span style={{fontSize: "10px", paddingLeft: "10px"}}>#5040</span></div>
                                 <p style={{fontSize: "12px", padding: "5px 0", color: "var(--text-color)"}}>Jordan Davis - Unit A103 - Today 9:42AM</p>
                             </div>
                         </div>
@@ -100,7 +100,7 @@ const { addPropertyPanel, modalOverviewStatus, addPropertyBtn} = usePropertyModa
                         <div className="recent-request-content-item">
                             <div><i className="fa fa-wrench pending-status"></i></div>
                             <div className='recent-request-content-data'>
-                                <p style={{color: "var(--primary-color)", display: "flex", alignItems: "center"}}><h5>Leakking toilet</h5> <span style={{fontSize: "10px", paddingLeft: "10px"}}>#5040</span></p>
+                                <div style={{color: "var(--primary-color)", display: "flex", alignItems: "center"}}><h5>Leakking toilet</h5> <span style={{fontSize: "10px", paddingLeft: "10px"}}>#5040</span></div>
                                 <p style={{fontSize: "12px", padding: "5px 0", color: "var(--text-color)"}}>Jordan Davis - Unit A103 - Today 9:42AM</p>
                             </div>
                         </div>
@@ -109,14 +109,14 @@ const { addPropertyPanel, modalOverviewStatus, addPropertyBtn} = usePropertyModa
 
                     <div className="recent-request-content-grid">
                         <div className="recent-request-content-item">
-                            <div><i className="fa fa-wrench active-status"></i></div>
+                            <div><i className="fa fa-wrench pending-status"></i></div>
                             <div className='recent-request-content-data'>
-                                <p style={{color: "var(--primary-color)", display: "flex", alignItems: "center"}}><h5>Leakking toilet</h5> <span style={{fontSize: "10px", paddingLeft: "10px"}}>#5040</span></p>
+                                <div style={{color: "var(--primary-color)", display: "flex", alignItems: "center"}}><h5>Leakking toilet</h5> <span style={{fontSize: "10px", paddingLeft: "10px"}}>#5040</span></div>
                                 <p style={{fontSize: "12px", padding: "5px 0", color: "var(--text-color)"}}>Jordan Davis - Unit A103 - Today 9:42AM</p>
                             </div>
                         </div>
-                        <p className="recent-request-status"><span className='active-status' style={{padding: "5px 10px", borderRadius: "5px"}}>Resolved</span></p>
-                    </div>
+                        <p className="recent-request-status"><span className='pending-status' style={{padding: "5px 10px", borderRadius: "5px"}}>Pending</span></p>
+                    </div>                
                 </div>
             </div>
 

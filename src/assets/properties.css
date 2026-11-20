@@ -1,5 +1,6 @@
 .property-listing-container {
     margin: 10px 30px;
+
 }
 
 .property-listing-grid {
@@ -19,7 +20,7 @@
 
 .property-listing-grid div:nth-child(1) {
     color: var(--text-color);
-    padding: 40px 10px ;
+    padding: 40px 10px;
     font-weight: 500;
     align-items: center;
     display: flex;
@@ -33,7 +34,7 @@
     line-height: 30px;
 }
 
-.property-listing-grid div:nth-child(2) div{
+.property-listing-grid div:nth-child(2) div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,13 +47,75 @@
 }
 
 .property-details-container {
-    /* background-color: red; */
+    background-color: var(--background);
     position: fixed;
     top: 0;
     right: 0;
-    width: 450px;
+    width: 350px;
+    display: none;
     height: 100dvh;
-    z-index: 99;
+    padding: 20px 10px;
+    z-index: 101;
+}
+
+.property-details-container-toggle {
+    display: block;
+}
+
+.property-details-container .fa-close {
+    padding: 10px 12px;
+    color: var(--primary-color);
+    border-radius: 100%;
+    background: var(--light-background);
+}
+
+.property-detail-status-count-grid {
+    background-color: var(--active-background);
+    color: var(--primary-color);
+    padding: 10px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    width: 95%;
+}
+
+.property-detail-status-count-grid:nth-child(2) {
+    background-color: var(--pending-background);
+    color: var(--pending-color);
+}
+
+.property-detail-status-count-grid p {
+    font-size: 12px;
+}
+
+.resident-access {
+    margin: 15px 0;
+}
+
+.resident-access button {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    color: white;
+    background: var(--primary-color);
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.resident-profile-grid {
+    padding: 10px;
+    background: var(--light-background);
+    border-radius: 10px;
+    border: 1px solid var(--outline-color);
+    margin: 12px 0;
+}
+
+.resident-profile-status {
+    background-color: var(--active-background);
+    font-size: 11px;
+    padding: 5px 15px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    color: var(--active-color);
 }
 
 @media screen and (min-width: 768px) {
