@@ -2,17 +2,22 @@ import { useState } from 'react'
 import NavBar from '../components/NavBar'
 import PageIntro from '../components/PageIntro'
 import AddProperty from '../components/AddProperty'
-import usePropertyModal from '../hooks/usePropertyModal' //hooks
+import AddTenant from '../components/AddTenant'
+import useModal from '../hooks/useModal' //hooks
 
 
 function Home () {
-const { addPropertyPanel, modalOverviewStatus, addPropertyBtn} = usePropertyModal()
+const { modalPanel: addPropertyPanel, modalOverviewStatus: modalOverviewStatus, toggleModal: addPropertyBtn} = useModal()
+const { modalPanel: addTenantPanel, modalOverviewStatus: tenantModalOverviewStatus, toggleModal: addTenantBtn} = useModal()
+
+
 
 
   return (
     <>
       {<NavBar />}
       {<AddProperty onPropertyModal={addPropertyPanel} closePropertyModal={addPropertyBtn} />}   {/* Add property modal component */}
+      {< AddTenant onTenantModal={addTenantPanel} closeTenantPanel={addTenantBtn} />}
 
       <div className='fixed-width'>
         <div className={`modal-overview ${modalOverviewStatus}`} onClick={addPropertyBtn}></div>
@@ -126,7 +131,7 @@ const { addPropertyPanel, modalOverviewStatus, addPropertyBtn} = usePropertyModa
                 <p style={{fontSize: "10px", color: "#9dc4a8", fontWeight: "bold", letterSpacing: "2px"}}>ACTIVATION CENTRE</p>
                 <h3 style={{color: "#fff", padding: "15px 0"}}>Get a new tenant settled in.</h3>
                 <p style={{fontSize: "12px", color: "#9dc4a8", lineHeight: "19px", paddingRight: "35%"}}>Create their profile, print their unique ID on the rent receipt, and let them activate their apartment by scanning its QR sticker.</p>
-                <button>Create tenant profile</button>
+                <button type='button' onClick={addTenantBtn}>Create tenant profile</button>
 
                 <div className="activation-centre-data-count">
                     <div className="activation-centre-data-count-grid">

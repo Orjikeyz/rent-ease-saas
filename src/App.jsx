@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router";
 import Index from "./pages/Index";
 import Properties from "./pages/Properties";
+import Notification from "./pages/Notification";
 import NotFound from "./pages/404";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Index/>} />
         <Route path='/properties' element={<Properties/>} />
+        <Route path='/notification' element={<Notification/>} />
 
 
         <Route path='*' element={<NotFound/>} />

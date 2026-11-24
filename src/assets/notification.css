@@ -1,0 +1,44 @@
+.notification-container {
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.notification-container-grid {
+    background: var(--box-background);
+    margin: 10px 0;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--outline-color);
+}
+
+.notification-container-grid h4 {
+    color: var(--primary-color);
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.notification-container-grid .fa-bell {
+    background-color: var(--light-background);
+    padding: 10px 12px;
+    border-radius: 100%;
+    color: var(--text-color);
+}
+
+.notification-container-grid p {
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.notification-post-status {
+    background-color: var(--light-background);
+    border-radius: 10px !important;
+    padding: 5px 10px !important;
+    font-weight: 500;
+    font-size: 8px !important;
+}
+
+@media screen and (min-width: 768px) {
+    .notification-container {
+        display: grid;
+    }       
+}

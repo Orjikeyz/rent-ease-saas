@@ -72,7 +72,7 @@
 .property-detail-status-count-grid {
     background-color: var(--active-background);
     color: var(--primary-color);
-    padding: 10px;
+    padding: 20px 10px;
     margin: 10px 5px;
     border-radius: 5px;
     width: 95%;
@@ -103,7 +103,7 @@
 
 .resident-profile-grid {
     padding: 10px;
-    background: var(--light-background);
+    background: var(--background);
     border-radius: 10px;
     border: 1px solid var(--outline-color);
     margin: 12px 0;

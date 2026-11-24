@@ -13,13 +13,13 @@ const AddProperty = ({onPropertyModal, closePropertyModal}) => {
                 </div>
 
                 <label htmlFor="property_name">Property Name</label>
-                <input type="text" id="property_name"/>
+                <input type="text" id="property_name" placeholder='e.g. The Jupiter' />
                 
                 <label htmlFor="property_address">Address</label>
-                <input type="text" id="address"/>
+                <input type="text" id="address" placeholder='Street, city' />
 
                 <label htmlFor="number_of_apartment">Number of Apartments</label>
-                <input type="text" id="number_of_apartment"/>
+                <input type="text" id="number_of_apartment" placeholder='24'/>
 
                 <button type="button">Create Property</button>
 

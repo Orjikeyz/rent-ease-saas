@@ -33,7 +33,7 @@ const SidePanel = ({openSidePanel, sidePanel}) => {
                         <li><i className="fa-regular fa-user"></i> <p>Tenants</p></li>
                     </NavLink>
 
-                    <NavLink to="/notifications">
+                    <NavLink to="/notification">
                         <li><i className="fa-regular fa-bell"></i> <p>Notification</p></li>
                     </NavLink>
 

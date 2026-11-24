@@ -3,11 +3,13 @@ import "../assets/properties.css"
 import NavBar from '../components/NavBar'
 import PageIntro from '../components/PageIntro'
 import AddProperty from '../components/AddProperty'
-import usePropertyModal from '../hooks/usePropertyModal' //hooks
+import AddTenant from '../components/AddTenant'
+import useModal from '../hooks/useModal' //hooks
 
 
 const Properties = () => {
-    const { addPropertyPanel, modalOverviewStatus, addPropertyBtn} = usePropertyModal()
+    const { modalPanel: addPropertyPanel, modalOverviewStatus: propertyModalOverviewStatus, toggleModal: addPropertyBtn} = useModal()
+    const { modalPanel: addTenantPanel, modalOverviewStatus: tenantModalOverviewStatus, toggleModal: addTenantBtn} = useModal()
 
     const [openPropertyProfilePanel, setopenPropertyProfilePanel] = useState(false)
     const propertySidePanel = openPropertyProfilePanel ? "property-details-container-toggle" : ""
@@ -15,13 +17,13 @@ const Properties = () => {
     
     const openPropertyProfile = () => {
         setopenPropertyProfilePanel(!openPropertyProfilePanel)
-        console.log(openPropertyProfilePanel)
     }
 
     return (
         <>
             {<NavBar />}
             {<AddProperty onPropertyModal={addPropertyPanel} closePropertyModal={addPropertyBtn} />}   {/* Add property modal component */}
+            {< AddTenant onTenantModal={addTenantPanel} closeTenantPanel={addTenantBtn} />}
 
             <div className={`modal-overview ${propertyModalOverview}`} onClick={openPropertyProfile}></div>
             {/* Property Detail profile right side panel */}
@@ -50,15 +52,15 @@ const Properties = () => {
 
                 <div className='resident-access flex-between'>
                     <h3 style={{color: "var(--text-color)", fontSize: "18px"}}>Resident access</h3>
-                    <button type="button">Add resident</button>
+                    <button type="button" onClick={addTenantBtn}>Add resident</button>
                 </div>
 
                 <div className="resident-profile-container">
                     <div className="resident-profile-grid flex-between" style={{color: "var(--text-color)"}}>
                         <div>
                             <h4 style={{color: "var(--primary-color)"}}>Unit A 101</h4>
-                            <p style={{fontSize: "12px", margin: "2.5px 0"}}>Jordan Davis</p>
-                            <p style={{fontSize: "11px", fontWeight: "500"}}><i className="fa fa-qrcode"></i> <span>RE-2401-8K2M</span></p>                            
+                            <p style={{fontSize: "12px", margin: "5px 0 10px 0"}}>Jordan Davis</p>
+                            <p style={{fontSize: "10px", fontWeight: "500"}}><i className="fa fa-qrcode"></i> <span>RE-2401-8K2M</span></p>                            
                         </div>
                         
                         <div><p className='resident-profile-status'>Active</p></div>
@@ -67,8 +69,8 @@ const Properties = () => {
                     <div className="resident-profile-grid flex-between" style={{color: "var(--text-color)"}}>
                         <div>
                             <h4 style={{color: "var(--primary-color)"}}>Unit A 101</h4>
-                            <p style={{fontSize: "12px", margin: "2.5px 0"}}>Jordan Davis</p>
-                            <p style={{fontSize: "11px", fontWeight: "500"}}><i className="fa fa-qrcode"></i> <span>RE-2401-8K2M</span></p>                            
+                            <p style={{fontSize: "12px", margin: "5px 0 10px 0"}}>Jordan Davis</p>
+                            <p style={{fontSize: "10px", fontWeight: "500"}}><i className="fa fa-qrcode"></i> <span>RE-2401-8K2M</span></p>                            
                         </div>
                         
                         <div><p className='resident-profile-status'>Active</p></div>
@@ -77,8 +79,8 @@ const Properties = () => {
                     <div className="resident-profile-grid flex-between" style={{color: "var(--text-color)"}}>
                         <div>
                             <h4 style={{color: "var(--primary-color)"}}>Unit A 101</h4>
-                            <p style={{fontSize: "12px", margin: "2.5px 0"}}>Jordan Davis</p>
-                            <p style={{fontSize: "11px", fontWeight: "500"}}><i className="fa fa-qrcode"></i> <span>RE-2401-8K2M</span></p>                            
+                            <p style={{fontSize: "12px", margin: "5px 0 10px 0"}}>Jordan Davis</p>
+                            <p style={{fontSize: "10px", fontWeight: "500"}}><i className="fa fa-qrcode"></i> <span>RE-2401-8K2M</span></p>                            
                         </div>
                         
                         <div><p className='resident-profile-status'>Active</p></div>
@@ -87,7 +89,7 @@ const Properties = () => {
             </div>
 
             <div className='fixed-width'>
-                <div className={`modal-overview ${modalOverviewStatus}`} onClick={addPropertyBtn}></div>
+                <div className={`modal-overview ${propertyModalOverviewStatus}`} onClick={addPropertyBtn}></div>
                 {
                 <PageIntro
                     title='PORTFOLIO'
