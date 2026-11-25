@@ -12,19 +12,17 @@ const Notification = () => {
     return (
         <>
             {<NavBar />}
-                {
-                <PageIntro
-                    title='Resident communications'
-                    heading='Notifications'
-                    description='Keep residents informed across one or all properties.'
-                    button='Post Notification'
-                    onAddProperty={addNotificationBtn}
-                />
-                }   
 
             {<AddNotification onNotificationModal={addNotificationPanel} closeNotificationPanel={addNotificationBtn} />}
 
             <div className="fixed-width">
+                {<PageIntro
+                        title='Resident communications'
+                        heading='Notifications'
+                        description='Keep residents informed across one or all properties.'
+                        button='Post Notification'
+                        onAddProperty={addNotificationBtn}
+                    />}   
                 <div className={`modal-overview ${modalOverviewStatus}`} onClick={addNotificationBtn}></div>
                 <div className="notification-container">
                     <div className="notification-container-grid flex-between">

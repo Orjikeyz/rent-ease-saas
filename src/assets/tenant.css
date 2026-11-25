@@ -1,0 +1,210 @@
+
+/* TENANT TABLE */
+
+.tenant-container {
+    margin: 10px 30px;
+}
+
+.tenant-table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tenant-search input {
+    width: 320px;
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--outline-color);
+    background: var(--light-background);
+    color: var(--primary-color);
+    outline: none;
+}
+
+.tenant-filter select {
+    padding: 12px 15px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid var(--outline-color);
+    background: var(--light-background);
+    color: var(--primary-color);
+
+}
+
+.tenant-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: var(--background);
+    border: 1px solid var(--outline-color);
+    border-radius: 8px;
+}
+
+.tenant-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.tenant-table th {
+    background: var(--light-background);
+    padding: 16px;
+    text-align: left;
+    color: var(--primary-color);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.tenant-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--outline-color);
+    color: var(--text-color);
+    font-size: 13px;
+}
+
+.tenant-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tenant-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--light-background);
+    color: var(--primary-color);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tenant-info h4 {
+    margin: 0 0 5px;
+    font-size: 13px;
+}
+
+.tenant-info span,
+.tenant-property span {
+    color: var(--primary-color);
+    font-size: 11px;
+}
+
+.tenant-property {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tenant-property strong {
+    font-weight: 500;
+}
+
+.tenant-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.tenant-status.active {
+    background: var(--active-background);
+    color: var(--active-color);
+}
+
+.tenant-status.pending {
+    background: var(--pending-background);
+    color: var(--pending-color);
+}
+
+.tenant-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.tenant-actions button {
+    border: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: var(--text-color);
+    background: var(--light-background);
+    cursor: pointer;
+}
+
+.tenant-table-footer {
+    padding: 15px 0;
+    font-size: 12px;
+    color: #888;
+}
+
+@media (max-width: 600px) {
+    .tenant-table-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tenant-search input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+.tenant-table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.tenant-count {
+    font-size: 13px;
+    color: var(--primary-color);
+}
+
+.tenant-pagination {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.pagination-btn,
+.pagination-number {
+    border: 1px solid var(--outline-color);
+    background: var(--light-background);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.pagination-number.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--outline-color);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    color: var(--primary-color);
+}
+
+.pagination-number:hover:not(.active),
+.pagination-btn:hover:not(:disabled) {
+    background: var(--background);
+}
+
+@media (max-width: 600px) {
+    .tenant-table-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tenant-pagination {
+        flex-wrap: wrap;
+    }
+}
