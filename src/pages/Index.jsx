@@ -10,9 +10,6 @@ function Home () {
 const { modalPanel: addPropertyPanel, modalOverviewStatus: modalOverviewStatus, toggleModal: addPropertyBtn} = useModal()
 const { modalPanel: addTenantPanel, modalOverviewStatus: tenantModalOverviewStatus, toggleModal: addTenantBtn} = useModal()
 
-
-
-
   return (
     <>
       {<NavBar />}

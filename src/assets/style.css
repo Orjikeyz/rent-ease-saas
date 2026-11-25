@@ -326,6 +326,16 @@ a {
     border-radius: 20px;
 }
 
+select, textarea {
+    border: 1px solid var(--outline-color);
+    outline: none;
+    width: 100%;
+    color: var(--primary-color);
+    background-color: var(--light-background);
+    padding: 15px 10px;
+    border-radius: 20px;
+}
+
 .property-modal-container button, .tenant-modal-container button {
     padding: 15px 10px;
     width: 100%;
