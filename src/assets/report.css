@@ -1,0 +1,509 @@
+
+/* REPORT DASHBOARD */
+
+.report-container {
+    margin: 10px 30px;
+}
+
+.report-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    gap: 15px;
+}
+
+.report-heading h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin: 0 0 6px;
+}
+
+.report-heading p,
+.report-panel-heading p {
+    color: var(--secondary-color);
+    font-size: 12px;
+    margin: 0;
+}
+
+.report-date {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.report-date span {
+    color: var(--secondary-color);
+    font-size: 12px;
+}
+
+.report-date select,
+.report-panel-heading select {
+    padding: 10px 13px;
+    border: 1px solid var(--outline-color);
+    background: var(--light-background);
+    color: var(--primary-color);
+    border-radius: 6px;
+    outline: none;
+}
+
+
+/* SUMMARY CARDS */
+
+.report-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.report-card {
+    background: var(--background);
+    border: 1px solid var(--outline-color);
+    border-radius: 9px;
+    padding: 20px;
+}
+
+.report-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-card-top span {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+.report-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    background: var(--light-background);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.report-card h2 {
+    font-size: 25px;
+    color: var(--primary-color);
+    margin: 18px 0 6px;
+}
+
+.report-card p {
+    font-size: 11px;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.report-card .revenue-value {
+    font-size: 20px;
+}
+
+
+/* REPORT PANELS */
+
+.report-analysis {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.report-panel {
+    background: var(--background);
+    border: 1px solid var(--outline-color);
+    border-radius: 9px;
+    padding: 22px;
+}
+
+.report-panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.report-panel-heading h3 {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin: 0 0 7px;
+}
+
+
+/* OCCUPANCY ANALYSIS */
+
+.occupancy-number {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.occupancy-number h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.occupancy-number span {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+.occupancy-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 20px;
+    background: var(--pending-background);
+    overflow: hidden;
+}
+
+.occupancy-filled {
+    height: 100%;
+    background: var(--active-color);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.occupancy-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.occupancy-details div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    color: var(--secondary-color);
+}
+
+.occupancy-details strong {
+    color: var(--primary-color);
+    margin-left: 3px;
+}
+
+.legend-dot {
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.occupied-dot {
+    background: var(--active-color);
+}
+
+.vacant-dot {
+    background: var(--pending-color);
+}
+
+.total-dot {
+    background: var(--secondary-color);
+}
+
+
+/* TENANT ACTIVATION */
+
+.activation-overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.activation-chart {
+    display: flex;
+    justify-content: center;
+}
+
+.activation-circle {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activation-circle-inner {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.activation-circle-inner h2 {
+    font-size: 25px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.activation-circle-inner span {
+    font-size: 11px;
+    color: var(--secondary-color);
+}
+
+.activation-details {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.activation-details > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.activation-details strong {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.activation-details p {
+    font-size: 11px;
+    color: var(--secondary-color);
+    margin: 5px 0 0;
+}
+
+
+/* PROPERTY PERFORMANCE */
+
+.property-performance {
+    margin-bottom: 22px;
+}
+
+.report-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.report-table th {
+    background: var(--light-background);
+    color: var(--primary-color);
+    text-align: left;
+    font-size: 10px;
+    padding: 14px;
+}
+
+.report-table td {
+    padding: 16px 14px;
+    border-bottom: 1px solid var(--outline-color);
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+.report-table td strong {
+    font-weight: 500;
+}
+
+.property-occupancy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.property-progress {
+    width: 65px;
+    height: 6px;
+    background: var(--pending-background);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.property-progress div {
+    height: 100%;
+    background: var(--active-color);
+    border-radius: 10px;
+}
+
+.property-occupancy span {
+    font-size: 11px;
+    color: var(--primary-color);
+}
+
+
+/* BOTTOM REPORT SECTION */
+
+.report-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* TENANT STATISTICS */
+
+.tenant-statistics {
+    display: flex;
+    flex-direction: column;
+}
+
+.tenant-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--outline-color);
+}
+
+.tenant-stat-row:last-child {
+    border-bottom: none;
+}
+
+.tenant-stat-row div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tenant-stat-row span {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+.tenant-stat-row strong {
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+.tenant-stat-row .tenant-status {
+    font-size: 10px;
+}
+
+
+/* RECENT ACTIVITIES */
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--outline-color);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--light-background);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.activity-icon.pending {
+    background: var(--pending-background);
+    color: var(--pending-color);
+}
+
+.activity-content strong {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.activity-content p {
+    font-size: 11px;
+    color: var(--secondary-color);
+    margin: 5px 0;
+}
+
+.activity-content span {
+    font-size: 10px;
+    color: var(--secondary-color);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .report-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .report-analysis {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .report-container {
+        margin: 10px 15px;
+    }
+
+    .report-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .report-date {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .report-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .activation-overview {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 500px) {
+    .report-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .report-card {
+        padding: 16px;
+    }
+
+    .report-panel {
+        padding: 15px;
+    }
+
+    .occupancy-details {
+        flex-direction: column;
+    }
+
+    .activation-overview {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .report-panel-heading {
+        align-items: flex-start;
+    }
+}

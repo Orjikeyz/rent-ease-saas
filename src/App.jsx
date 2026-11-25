@@ -4,6 +4,7 @@ import Properties from "./pages/Properties";
 import Notification from "./pages/Notification";
 import Tenant from "./pages/Tenant";
 import NotFound from "./pages/404";
+import Report from "./pages/Report";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/properties' element={<Properties/>} />
         <Route path='/notifications' element={<Notification/>} />
         <Route path='/tenants' element={<Tenant/>} />
+        <Route path='/reports' element={<Report/>} />
 
 
         <Route path='*' element={<NotFound/>} />
