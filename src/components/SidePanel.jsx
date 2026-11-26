@@ -44,7 +44,9 @@ const SidePanel = ({openSidePanel, sidePanel}) => {
 
                 <div className="side-panel-footer">
                     <ul className="side-panel-ul"> 
-                        <Link to=""><li><i className="fa fa-wrench"></i> <p>Settings</p></li></Link>
+                        <NavLink to="/settings">
+                            <li><i className="fa fa-wrench"></i> <p>Settings</p></li>
+                        </NavLink>
                     </ul>
                     <ul className="side-panel-footer-bottom">
                         <li>

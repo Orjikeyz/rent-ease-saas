@@ -5,7 +5,7 @@ const PageIntro = (props) => {
         <>
             <div className="pageIntro">
                 <div>
-                    <p>{props.title}</p>
+                    <p style={{textTransform: "uppercase"}}>{props.title}</p>
                     <h1>{props.heading}</h1>
                     <p>{props.description}</p>
                 </div>
